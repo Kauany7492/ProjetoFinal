@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="iconcal.jpg">
+</head>
+<body>
+    <header>
+        <br>
+        <h1 style="color: white">Calculadora de IMC</h1>
+        <br>
+        <br>
+    </header>
+
+        <h2>O que é?</h2>
+        <p>A sigla IMC significa “Índice de Massa Corporal".Basicamente, é uma fórmula que avalia a relação entre suas medidas corporais, ajudando a descobrir se você tem o peso ideal para sua altura. Mas não é suficiente para definir o estado de saúde de uma pessoa: outras avaliações e, claro, o olhar de um profissional de saúde, são imprescindíveis para um diagnóstico preciso.</p>
+        <p>Porém, o cálculo do IMC pode servir de alerta para alguns problemas de saúde, já que indica se o peso está abaixo ou acima do esperado. Além disso, pode nos motivar a mudar de hábitos, e também a procurar a orientação de um especialista que nos ajude.</p>
+        <p>Medir o IMC e descobrir seu peso ideal é muito simples. A fórmula é:</p>
+    <br>
+    <br>
+
+    <div class="caixa">
+        <h3>IMC = Peso ÷ Altura x Altura</h3>
+    </div>
+
+    <br>
+    <br>
+
+    <img src="tabela-imc.png">
+
+    <br>
+    <br>
+
+    <div class="caixa1"> 
+    <br>
+    <div style="text-align:center">Utilize a calculadora abaixo para calcular seu IMC:</div>
+
+    <p>Peso:</p>
+    <input id="peso" placeholder="Digite o seu peso" type="number" step="0.01" /><br><br>
+    <p>Altura:</p>
+    <input id="altura" placeholder="Digite a sua altura" type="number" step="0.01" /><br><br>
+    <button onclick="calcularimc()">Calcular IMC</button>
+    <br>
+    <br>
+
+    <div class="p"></div>
+    </div>
+    <br>
+   
+    <h2>Tabela de peso ideal por idade:</h2>
+
+    <p>A tabela de peso ideal por idade é uma ferramenta prática e muito utilizada  para avaliar o crescimento em crianças até os 10 anos de idade, já que o peso é uma medida importante para verificar o estado nutricional e saúde geral.</p>
+    <p>Em crianças, principalmente a partir dos 10 anos, e adultos, outras medidas além do peso, como o índice de massa corporal (IMC) e a altura, também devem ser levadas em consideração para avaliar o estado de saúde. Saiba o que é IMC e seu valor normal.</p>
+
+    <br>
+    <br>
+
+    <img src="IMC-Tabela-Infantil.jpg">
+
+    <br>
+    <br>
+
+    <script>
+        function calcularimc(){
+            const peso = parseFloat(document.getElementById("peso").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+            const imc = (peso/ (altura * altura)).toFixed(1);
+            document.querySelector(".p").innerHTML = classificacao(imc);
+        }
+        function classificacao(imc){
+          if(imc< 18.5){
+                 return "Magreza";
+            }
+         if(imc>= 18.5 && imc<=24.9){
+                 return "Normal";
+            }
+         if(imc>= 25 && imc<=29.9){
+                return "Sobrepeso";
+            }
+        if(imc>= 30 && imc<=34.9){
+                 return "Obesidade grau I";
+            }
+        if(imc>= 35 && imc<=39.9){
+                 return "Obesidade grau II";
+            }
+        if(imc>= 40 ){
+                 return "Obesidade grau III";
+            }
+
+        }
+          
+    </script>
+
+    <footer>
+        <br>
+        <h1 style="color: white" >Calculadora de IMC</h1>
+        <br>
+    </footer>
+
+</body>
+</html>

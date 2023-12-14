@@ -1,0 +1,72 @@
+
+body{
+    font-style: italic;
+    background: rgb(235, 233, 233);
+}
+
+header, footer{
+    background-color: #98A48C;
+    text-align: center;
+}
+
+.caixa{
+    color: white;
+    background: #98A48C;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 35%;
+}
+
+input{
+    background: #98A48C;
+    color: white;
+    border-color: #98A48C;
+}
+
+button{
+    background: #C86355;
+    color: #D9B3AE;
+    border-color: #C86355;
+}
+
+h2{
+    color: #C86355;
+    font: bolder;
+}
+
+img{
+    margin-left: 30%;
+    opacity: 0.5;
+    max-width:500px;
+    max-height:300px;
+    width: auto;
+    height: auto;
+}
+
+h3{
+    font: normal;
+}
+
+p{
+    color: rgb(107, 106, 106);
+}
+
+.caixa1{
+    background: #c2c2c2;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 28%;
+}
+
+.p{
+    color: rgb(204, 204, 204);
+    background: #7c7c7c;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+}
